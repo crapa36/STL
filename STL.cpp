@@ -8,7 +8,7 @@
 // ----------------------------------------------------------
 
 #include <iostream>
-#include "save.cpp"
+#include "save.h"
 using namespace std;
 
 //main을 수정하지 않고 의도대로 실행되게 change를 선언하고 정의하라
