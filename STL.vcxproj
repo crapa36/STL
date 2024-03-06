@@ -128,7 +128,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="save.cpp" />
     <ClCompile Include="STL.cpp" />
   </ItemGroup>
   <ItemGroup>
