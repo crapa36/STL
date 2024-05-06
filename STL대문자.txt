@@ -1,0 +1,30 @@
+//----------------------------------------------------------
+// 
+// [문제] 10000~99999 INT100개
+// QSORT사용해 오름차순으로 정렬
+// 결과 출력
+// ----------------------------------------------------------
+
+
+#INCLUDE <IOSTREAM>
+#INCLUDE <VECTOR>
+#INCLUDE <ALGORITHM>
+#INCLUDE "SAVE.H"
+
+USING NAMESPACE STD;
+
+INT MAIN() {
+    IFSTREAM IN("STL.CPP", IOS::BINARY);
+    IF (!IN.IS_OPEN()) {
+        RETURN 3333333;
+    }
+    
+    OFSTREAM OUT("STL대문자.TXT", IOS::BINARY);
+
+    TRANSFORM(ISTREAMBUF_ITERATOR<CHAR>{IN}, {}, OSTREAMBUF_ITERATOR<CHAR>{OUT}, ::TOUPPER);
+
+    IN.CLOSE();
+    OUT.CLOSE();
+
+    SAVE("STL.CPP");
+}
