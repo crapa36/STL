@@ -28821,3 +28821,2447 @@ int main() {
     관찰 = false;
     save("STL.cpp");
 }
+
+
+====================
+STL.cpp, 저장시간 : 2024-05-13 월요일 오후 6:37:43 
+====================
+//---------------------------------------------------------
+// 2024 1학기 STL 5월 13일 화요일
+// 
+// 반복자가 뭐야 ? : 포인터를 일반화한 것.
+//---------------------------------------------------------
+#include <iostream>
+#include "save.h"
+#include "string.h"
+#include <algorithm>
+
+using namespace std;
+extern bool 관찰;
+
+
+int main()
+{
+    String s{ "1357924680" };
+
+    sort(s.rbegin(), s.rend());
+
+    cout << s << endl;
+
+    save("STL.cpp");
+}
+
+====================
+STL.cpp, 저장시간 : 2024-05-13 월요일 오후 6:39:14 
+====================
+//---------------------------------------------------------
+// 2024 1학기 STL 5월 13일 화요일
+// 
+// 반복자가 뭐야 ? : 포인터를 일반화한 것.
+//---------------------------------------------------------
+#include <iostream>
+#include "save.h"
+#include "string.h"
+#include <algorithm>
+
+using namespace std;
+extern bool 관찰;
+
+
+int main()
+{
+    String s{ "1357924680" };
+
+    sort(s.begin(), s.end());
+
+    cout << s << endl;
+
+    save("STL.cpp");
+}
+
+====================
+STL.cpp, 저장시간 : 2024-05-14 화요일 오후 3:35:47 
+====================
+//---------------------------------------------------------
+// 2024 1학기 STL 5월 13일 화요일
+// 
+// 알고리즘 함수는 반복자를 인자로 받는다.
+//---------------------------------------------------------
+#include <iostream>
+#include "save.h"
+#include "string.h"
+#include <algorithm>
+#include <vector>
+using namespace std;
+extern bool 관찰;
+
+
+template <class 반복자, class 값>
+반복자 my_find(반복자 b, 반복자 e, 값 v) {
+    for (; b < e; ++b) {
+        if(*b == v)return b;
+    }
+    return e;
+}
+
+int main(){
+    save("STL.cpp");
+    String s{ "20240513 - stl container iterator algorithm" };
+    // 사용자가 찾는 글자가 s에 있는지 알려주자
+    while (true) {
+        cout << "찾을 문자는? ";
+        char ch;
+        cin >> ch;
+
+        auto p = my_find(s.begin(), s.end(), ch);
+        if (p != s.end())
+            cout << "위치 -  " << "을 찾음" << endl;
+        else
+            cout << ch << "는 s에 없는 글자입니다." << endl;
+    }
+}
+
+====================
+STL.cpp, 저장시간 : 2024-05-14 화요일 오후 3:36:43 
+====================
+//---------------------------------------------------------
+// 2024 1학기 STL 5월 13일 화요일
+// 
+// 알고리즘 함수는 반복자를 인자로 받는다.
+//---------------------------------------------------------
+#include <iostream>
+#include "save.h"
+#include "string.h"
+#include <algorithm>
+#include <vector>
+using namespace std;
+extern bool 관찰;
+
+
+template <class 반복자, class 값>
+반복자 my_find(반복자 b, 반복자 e, 값 v) {
+    for (; b < e; ++b) {
+        if(*b == v)return b;
+    }
+    return e;
+}
+
+int main(){
+    save("STL.cpp");
+    String s{ "20240513 - stl container iterator algorithm" };
+    // 사용자가 찾는 글자가 s에 있는지 알려주자
+    while (true) {
+        cout << "찾을 문자는? ";
+        char ch;
+        cin >> ch;
+
+        auto p = my_find(s.begin(), s.end(), ch);
+        if (p != s.end())
+            cout << "위치 -  " << "을 찾음" << endl;
+        else
+            cout << ch << "는 s에 없는 글자입니다." << endl;
+    }
+}
+
+====================
+STL.cpp, 저장시간 : 2024-05-14 화요일 오후 3:41:06 
+====================
+//---------------------------------------------------------
+// 2024 1학기 STL 5월 13일 화요일
+// 
+// 알고리즘 함수는 반복자를 인자로 받는다.
+//---------------------------------------------------------
+#include <iostream>
+#include "save.h"
+#include "string.h"
+#include <algorithm>
+#include <vector>
+using namespace std;
+extern bool 관찰;
+
+
+template <class 반복자, class 값>
+반복자 my_find(반복자 b, 반복자 e, 값 v) {
+    for (; b < e; ++b) {
+        if(*b == v)return b;
+    }
+    return e;
+}
+
+int main(){
+    save("STL.cpp");
+    String s{ "20240513 - stl container iterator algorithm" };
+    // 사용자가 찾는 글자가 s에 있는지 알려주자
+    while (true) {
+        cout << "찾을 문자는? ";
+        char ch;
+        cin >> ch;
+
+        auto p = my_find(s.begin(), s.end(), ch);
+        if (p != s.end())
+            cout << "위치 -  "<< *p << "을 찾음" << endl;
+        else
+            cout << ch << "는 s에 없는 글자입니다." << endl;
+    }
+}
+
+====================
+STL.cpp, 저장시간 : 2024-05-14 화요일 오후 3:42:21 
+====================
+//---------------------------------------------------------
+// 2024 1학기 STL 5월 13일 화요일
+// 
+// 알고리즘 함수는 반복자를 인자로 받는다.
+//---------------------------------------------------------
+#include <iostream>
+#include "save.h"
+#include "string.h"
+#include <algorithm>
+#include <vector>
+using namespace std;
+extern bool 관찰;
+
+
+template <class 반복자, class 값>
+반복자 my_find(반복자 b, 반복자 e, 값 v) {
+    for (; b < e; ++b) {
+        if(*b == v)return b;
+    }
+    return e;
+}
+
+int main(){
+    save("STL.cpp");
+    String s{ "20240513 - stl container iterator algorithm" };
+    // 사용자가 찾는 글자가 s에 있는지 알려주자
+    while (true) {
+        cout << "찾을 문자는? ";
+        char ch;
+        cin >> ch;
+
+        auto p = my_find(s.begin(), s.end(), ch);
+        if (p != s.end())
+            cout << "위치 -  "<< distance(s.begin(),p)+1<<"에서"<< *p << "을 찾음" << endl;
+        else
+            cout << ch << "는 s에 없는 글자입니다." << endl;
+    }
+}
+
+====================
+STL.cpp, 저장시간 : 2024-05-14 화요일 오후 3:43:04 
+====================
+//---------------------------------------------------------
+// 2024 1학기 STL 5월 13일 화요일
+// 
+// 알고리즘 함수는 반복자를 인자로 받는다.
+//---------------------------------------------------------
+#include <iostream>
+#include "save.h"
+#include "string.h"
+#include <algorithm>
+#include <vector>
+using namespace std;
+extern bool 관찰;
+
+
+template <class 반복자, class 값>
+반복자 my_find(반복자 b, 반복자 e, 값 v) {
+    for (; b < e; ++b) {
+        if(*b == v)return b;
+    }
+    return e;
+}
+
+int main(){
+    save("STL.cpp");
+    String s{ "20240513 - stl container iterator algorithm" };
+    // 사용자가 찾는 글자가 s에 있는지 알려주자
+    while (true) {
+        cout << "찾을 문자는? ";
+        char ch;
+        cin >> ch;
+
+        auto p = my_find(s.begin(), s.end(), ch);
+        if (p != s.end())
+            cout << *p <<"(은)는 "<< distance(s.begin(),p)+1<<"번째 글자입니다."<< endl;
+        else
+            cout << ch << "는 s에 없는 글자입니다." << endl;
+    }
+}
+
+====================
+STL.cpp, 저장시간 : 2024-05-14 화요일 오후 3:44:06 
+====================
+//---------------------------------------------------------
+// 2024 1학기 STL 5월 13일 화요일
+// 
+// 알고리즘 함수는 반복자를 인자로 받는다.
+//---------------------------------------------------------
+#include <iostream>
+#include "save.h"
+#include "string.h"
+#include <algorithm>
+#include <vector>
+using namespace std;
+extern bool 관찰;
+
+
+template <class 반복자, class 값>
+반복자 my_find(반복자 b, 반복자 e, 값 v) {
+    for (; b < e; ++b) {
+        if(*b == v)break;
+    }
+    return b;
+}
+
+int main(){
+    save("STL.cpp");
+    String s{ "20240513 - stl container iterator algorithm" };
+    // 사용자가 찾는 글자가 s에 있는지 알려주자
+    while (true) {
+        cout << "찾을 문자는? ";
+        char ch;
+        cin >> ch;
+
+        auto p = my_find(s.begin(), s.end(), ch);
+        if (p != s.end())
+            cout << *p <<"(은)는 "<< distance(s.begin(),p)+1<<"번째 글자입니다."<< endl;
+        else
+            cout << ch << "는 s에 없는 글자입니다." << endl;
+    }
+}
+
+====================
+STL.cpp, 저장시간 : 2024-05-14 화요일 오후 3:51:26 
+====================
+//---------------------------------------------------------
+// 2024 1학기 STL 5월 13일 화요일
+// 
+// 알고리즘 함수는 반복자를 인자로 받는다.
+//---------------------------------------------------------
+#include <iostream>
+#include "save.h"
+#include "string.h"
+#include <algorithm>
+#include <vector>
+using namespace std;
+extern bool 관찰;
+
+
+template <class 반복자, class 값>
+반복자 my_find(반복자 b, 반복자 e, 값 v) {
+    for (; b < e; ++b) {
+        if(*b == v)break;
+    }
+    return b;
+}
+
+template <class 반복자, class 조건문>
+반복자 my_find_if(반복자 b, 반복자 e, 조건문 v) {
+    for (; b < e; ++b) {
+        if (v(*b))break;
+    }
+    return b;
+}
+
+int main(){
+    save("STL.cpp");
+    String s{ "20240513 - stl container iterator algorithm" };
+    // 사용자가 찾는 글자가 s에 있는지 알려주자
+    while (true) {
+        cout << "찾을 문자는? ";
+        char ch;
+        cin >> ch;
+
+        auto p = my_find_if(s.begin(), s.end(), [](int i) { return i > 5; });
+        if (p != s.end())
+            cout << *p <<"(은)는 "<< distance(s.begin(),p)+1<<"번째 글자입니다."<< endl;
+        else
+            cout << ch << "는 s에 없는 글자입니다." << endl;
+    }
+}
+
+====================
+STL.cpp, 저장시간 : 2024-05-14 화요일 오후 3:53:45 
+====================
+//---------------------------------------------------------
+// 2024 1학기 STL 5월 13일 화요일
+// 
+// 알고리즘 함수는 반복자를 인자로 받는다.
+//---------------------------------------------------------
+#include <iostream>
+#include "save.h"
+#include "string.h"
+#include <algorithm>
+#include <vector>
+using namespace std;
+extern bool 관찰;
+
+
+template <class 반복자, class 값>
+반복자 my_find(반복자 b, 반복자 e, 값 v) {
+    for (; b < e; ++b) {
+        if(*b == v)break;
+    }
+    return b;
+}
+
+template <class 반복자, class 조건문>
+반복자 my_find_if(반복자 b, 반복자 e, 조건문 v) {
+    for (; b < e; ++b) {
+        if (v(*b))break;
+    }
+    return b;
+}
+
+int main(){
+    save("STL.cpp");
+    String s{ "20240513 - stl container iterator algorithm" };
+    // 사용자가 찾는 글자가 s에 있는지 알려주자
+    while (true) {
+        cout << "찾을 문자는? ";
+        char ch;
+        cin >> ch;
+
+        auto p = my_find_if(s.begin(), s.end(), [](int i) { return i > 1; });
+        if (p != s.end())
+            cout << *p <<"(은)는 "<< distance(s.begin(),p)+1<<"번째 글자입니다."<< endl;
+        else
+            cout << ch << "는 s에 없는 글자입니다." << endl;
+    }
+}
+
+====================
+STL.cpp, 저장시간 : 2024-05-14 화요일 오후 3:54:05 
+====================
+//---------------------------------------------------------
+// 2024 1학기 STL 5월 13일 화요일
+// 
+// 알고리즘 함수는 반복자를 인자로 받는다.
+//---------------------------------------------------------
+#include <iostream>
+#include "save.h"
+#include "string.h"
+#include <algorithm>
+#include <vector>
+using namespace std;
+extern bool 관찰;
+
+
+template <class 반복자, class 값>
+반복자 my_find(반복자 b, 반복자 e, 값 v) {
+    for (; b < e; ++b) {
+        if(*b == v)break;
+    }
+    return b;
+}
+
+template <class 반복자, class 조건문>
+반복자 my_find_if(반복자 b, 반복자 e, 조건문 v) {
+    for (; b < e; ++b) {
+        if (v(*b))break;
+    }
+    return b;
+}
+
+int main(){
+    save("STL.cpp");
+    String s{ "20240513 - stl container iterator algorithm" };
+    // 사용자가 찾는 글자가 s에 있는지 알려주자
+    while (true) {
+        cout << "찾을 문자는? ";
+        char ch;
+        cin >> ch;
+
+        auto p = my_find_if(s.begin(), s.end(), [](int i) { return i > 4; });
+        if (p != s.end())
+            cout << *p <<"(은)는 "<< distance(s.begin(),p)+1<<"번째 글자입니다."<< endl;
+        else
+            cout << ch << "는 s에 없는 글자입니다." << endl;
+    }
+}
+
+====================
+STL.cpp, 저장시간 : 2024-05-14 화요일 오후 3:55:44 
+====================
+//---------------------------------------------------------
+// 2024 1학기 STL 5월 13일 화요일
+// 
+// 알고리즘 함수는 반복자를 인자로 받는다.
+//---------------------------------------------------------
+#include <iostream>
+#include "save.h"
+#include "string.h"
+#include <algorithm>
+#include <vector>
+using namespace std;
+extern bool 관찰;
+
+
+template <class 반복자, class 값>
+반복자 my_find(반복자 b, 반복자 e, 값 v) {
+    for (; b < e; ++b) {
+        if(*b == v)break;
+    }
+    return b;
+}
+
+template <class 반복자, class 조건문>
+반복자 my_find_if(반복자 b, 반복자 e, 조건문 v) {
+    for (; b < e; ++b) {
+        if (v(*b))break;
+    }
+    return b;
+}
+
+int main(){
+    save("STL.cpp");
+    String s{ "20240513 - stl container iterator algorithm" };
+    // 사용자가 찾는 글자가 s에 있는지 알려주자
+    while (true) {
+        cout << "찾을 문자는? ";
+        char ch;
+        cin >> ch;
+
+        auto p = my_find_if(s.begin(), s.end(), [](char c) { return isdigit(c); });
+        if (p != s.end())
+            cout << *p <<"(은)는 "<< distance(s.begin(),p)+1<<"번째 글자입니다."<< endl;
+        else
+            cout << ch << "는 s에 없는 글자입니다." << endl;
+    }
+}
+
+====================
+STL.cpp, 저장시간 : 2024-05-14 화요일 오후 3:56:36 
+====================
+//---------------------------------------------------------
+// 2024 1학기 STL 5월 13일 화요일
+// 
+// 알고리즘 함수는 반복자를 인자로 받는다.
+//---------------------------------------------------------
+#include <iostream>
+#include "save.h"
+#include "string.h"
+#include <algorithm>
+#include <vector>
+using namespace std;
+extern bool 관찰;
+
+
+template <class 반복자, class 값>
+반복자 my_find(반복자 b, 반복자 e, 값 v) {
+    for (; b < e; ++b) {
+        if(*b == v)break;
+    }
+    return b;
+}
+
+template <class 반복자, class 조건문>
+반복자 my_find_if(반복자 b, 반복자 e, 조건문 v) {
+    for (; b < e; ++b) {
+        if (v(*b))break;
+    }
+    return b;
+}
+
+int main(){
+    save("STL.cpp");
+    String s{ "20240513 - Stl container iterator algorithm" };
+    // 사용자가 찾는 글자가 s에 있는지 알려주자
+    while (true) {
+        cout << "찾을 문자는? ";
+        char ch;
+        cin >> ch;
+
+        auto p = my_find_if(s.begin(), s.end(), [](char c) { return isupper(c); });
+        if (p != s.end())
+            cout << *p <<"(은)는 "<< distance(s.begin(),p)+1<<"번째 글자입니다."<< endl;
+        else
+            cout << ch << "는 s에 없는 글자입니다." << endl;
+    }
+}
+
+====================
+STL.cpp, 저장시간 : 2024-05-14 화요일 오후 3:57:30 
+====================
+//---------------------------------------------------------
+// 2024 1학기 STL 5월 13일 화요일
+// 
+// 알고리즘 함수는 반복자를 인자로 받는다.
+//---------------------------------------------------------
+#include <iostream>
+#include "save.h"
+#include "string.h"
+#include <algorithm>
+#include <vector>
+using namespace std;
+extern bool 관찰;
+
+
+template <class 반복자, class 값>
+반복자 my_find(반복자 b, 반복자 e, 값 v) {
+    for (; b < e; ++b) {
+        if(*b == v)break;
+    }
+    return b;
+}
+
+template <class 반복자, class 조건문>
+반복자 my_find_if(반복자 b, 반복자 e, 조건문 v) {
+    for (; b < e; ++b) {
+        if (v(*b))break;
+    }
+    return b;
+}
+
+int main(){
+    save("STL.cpp");
+    String s{ "20240513 - Stl container iterator algorithm" };
+    // 사용자가 찾는 글자가 s에 있는지 알려주자
+    while (true) {
+
+        auto p = my_find_if(s.begin(), s.end(), [](char c) { return isupper(c); });
+        if (p != s.end())
+            cout << *p <<"(은)는 "<< distance(s.begin(),p)+1<<"번째 글자입니다."<< endl;
+        
+    }
+}
+
+====================
+STL.cpp, 저장시간 : 2024-05-14 화요일 오후 4:19:16 
+====================
+//---------------------------------------------------------
+// 2024 1학기 STL 5월 13일 화요일
+// 
+// 알고리즘 함수는 반복자를 인자로 받는다.
+//---------------------------------------------------------
+#include <iostream>
+#include "save.h"
+#include "string.h"
+#include <algorithm>
+#include <vector>
+using namespace std;
+extern bool 관찰;
+
+
+template <class 반복자, class 값>
+반복자 my_find(반복자 b, 반복자 e, 값 v) {
+    for (; b < e; ++b) {
+        if(*b == v)break;
+    }
+    return b;
+}
+
+template <class 반복자, class 조건자>
+반복자 my_find_if(반복자 b, 반복자 e, 조건자 f) {
+    for (; b < e; ++b) {
+        if (f(*b))break;
+    }
+    return b;
+}
+
+bool 홀수판단(char c) {
+    if (isdigit(c))
+        if (c & 1)
+            return true;
+    return false;
+}
+
+int main(){
+    save("STL.cpp");
+    String s{ "20240513 - Stl container iterator algorithm" };
+    // 사용자가 찾는 글자가 s에 있는지 알려주자
+    auto p = my_find_if(s.begin(), s.end(), 홀수판단);
+    while (p==s.end()) {
+        p = my_find_if(p, s.end(), 홀수판단);
+
+    }
+    
+
+}
+
+====================
+STL.cpp, 저장시간 : 2024-05-14 화요일 오후 4:23:38 
+====================
+//---------------------------------------------------------
+// 2024 1학기 STL 5월 13일 화요일
+// 
+// 알고리즘 함수는 반복자를 인자로 받는다.
+//---------------------------------------------------------
+#include <iostream>
+#include "save.h"
+#include "string.h"
+#include <algorithm>
+#include <vector>
+using namespace std;
+extern bool 관찰;
+
+
+template <class 반복자, class 값>
+반복자 my_find(반복자 b, 반복자 e, 값 v) {
+    for (; b < e; ++b) {
+        if(*b == v)break;
+    }
+    return b;
+}
+
+template <class 반복자, class 조건자>
+반복자 my_find_if(반복자 b, 반복자 e, 조건자 f) {
+    for (; b < e; ++b) {
+        if (f(*b))break;
+    }
+    return b;
+}
+
+bool 홀수판단(char c) {
+    if (isdigit(c))
+        if (c & 1)
+            return true;
+    return false;
+}
+
+int main(){
+    save("STL.cpp");
+    String s{ "20240513 - Stl container iterator algorithm" };
+    // 사용자가 찾는 글자가 s에 있는지 알려주자
+    auto p = my_find_if(s.begin(), s.end(), 홀수판단);
+    while (p==s.end()) {
+        p = my_find_if(p, s.end(), 홀수판단);
+
+    }
+}
+
+====================
+STL.cpp, 저장시간 : 2024-05-14 화요일 오후 4:24:20 
+====================
+//---------------------------------------------------------
+// 2024 1학기 STL 5월 13일 화요일
+// 
+// 알고리즘 함수는 반복자를 인자로 받는다.
+//---------------------------------------------------------
+#include <iostream>
+#include "save.h"
+#include "string.h"
+#include <algorithm>
+#include <vector>
+using namespace std;
+extern bool 관찰;
+
+
+template <class 반복자, class 값>
+반복자 my_find(반복자 b, 반복자 e, 값 v) {
+    for (; b < e; ++b) {
+        if(*b == v)break;
+    }
+    return b;
+}
+
+template <class 반복자, class 조건자>
+반복자 my_find_if(반복자 b, 반복자 e, 조건자 f) {
+    for (; b < e; ++b) {
+        if (f(*b))break;
+    }
+    return b;
+}
+
+bool 홀수판단(char c) {
+    if (isdigit(c))
+        if (c & 1)
+            return true;
+    return false;
+}
+
+int main(){
+    save("STL.cpp");
+    String s{ "20240513 - Stl container iterator algorithm" };
+    // 사용자가 찾는 글자가 s에 있는지 알려주자
+    auto p = my_find_if(s.begin(), s.end(), 홀수판단);
+    while (p==s.end()) {
+        cout << *p << endl;
+        p = my_find_if(p, s.end(), 홀수판단);
+
+    }
+}
+
+====================
+STL.cpp, 저장시간 : 2024-05-14 화요일 오후 4:24:32 
+====================
+//---------------------------------------------------------
+// 2024 1학기 STL 5월 13일 화요일
+// 
+// 알고리즘 함수는 반복자를 인자로 받는다.
+//---------------------------------------------------------
+#include <iostream>
+#include "save.h"
+#include "string.h"
+#include <algorithm>
+#include <vector>
+using namespace std;
+extern bool 관찰;
+
+
+template <class 반복자, class 값>
+반복자 my_find(반복자 b, 반복자 e, 값 v) {
+    for (; b < e; ++b) {
+        if(*b == v)break;
+    }
+    return b;
+}
+
+template <class 반복자, class 조건자>
+반복자 my_find_if(반복자 b, 반복자 e, 조건자 f) {
+    for (; b < e; ++b) {
+        if (f(*b))break;
+    }
+    return b;
+}
+
+bool 홀수판단(char c) {
+    if (isdigit(c))
+        if (c & 1)
+            return true;
+    return false;
+}
+
+int main(){
+    save("STL.cpp");
+    String s{ "20240513 - Stl container iterator algorithm" };
+    // 사용자가 찾는 글자가 s에 있는지 알려주자
+    auto p = my_find_if(s.begin(), s.end(), 홀수판단);
+    while (p!=s.end()) {
+        cout << *p << endl;
+        p = my_find_if(p, s.end(), 홀수판단);
+
+    }
+}
+
+====================
+STL.cpp, 저장시간 : 2024-05-14 화요일 오후 4:25:05 
+====================
+//---------------------------------------------------------
+// 2024 1학기 STL 5월 13일 화요일
+// 
+// 알고리즘 함수는 반복자를 인자로 받는다.
+//---------------------------------------------------------
+#include <iostream>
+#include "save.h"
+#include "string.h"
+#include <algorithm>
+#include <vector>
+using namespace std;
+extern bool 관찰;
+
+
+template <class 반복자, class 값>
+반복자 my_find(반복자 b, 반복자 e, 값 v) {
+    for (; b < e; ++b) {
+        if(*b == v)break;
+    }
+    return b;
+}
+
+template <class 반복자, class 조건자>
+반복자 my_find_if(반복자 b, 반복자 e, 조건자 f) {
+    for (; b < e; ++b) {
+        if (f(*b))break;
+    }
+    return b;
+}
+
+bool 홀수판단(char c) {
+    if (isdigit(c))
+        if (c & 1)
+            return true;
+    return false;
+}
+
+int main(){
+    save("STL.cpp");
+    String s{ "20240513 - Stl container iterator algorithm" };
+    // 사용자가 찾는 글자가 s에 있는지 알려주자
+    auto p = my_find_if(s.begin(), s.end(), 홀수판단);
+    while (p!=s.end()) {
+        cout << *p << endl;
+        ++p;
+        p = my_find_if(p, s.end(), 홀수판단);
+
+    }
+}
+
+====================
+STL.cpp, 저장시간 : 2024-05-14 화요일 오후 4:43:00 
+====================
+//---------------------------------------------------------
+// 2024 1학기 STL 5월 13일 화요일
+// 
+// 알고리즘 함수는 반복자를 인자로 받는다.
+//---------------------------------------------------------
+#include <iostream>
+#include "save.h"
+#include "string.h"
+#include <algorithm>
+#include <vector>
+using namespace std;
+extern bool 관찰;
+
+
+template <class 반복자, class 값>
+반복자 my_find(반복자 b, 반복자 e, 값 v) {
+    for (; b < e; ++b) {
+        if(*b == v)break;
+    }
+    return b;
+}
+
+template <class 반복자, class 조건자>
+반복자 my_find_if(반복자 b, 반복자 e, 조건자 f) {
+    for (; b < e; ++b) {
+        if (f(*b))break;
+    }
+    return b;
+}
+
+template <class 반복자, class 출력>
+void my_copy(반복자 b, 반복자 e, 출력 f) {
+    for (; b < e; ++b) {
+        f= *b;
+    }
+
+}
+
+
+bool 홀수판단(char c) {
+    if (isdigit(c))
+        if (c & 1)
+            return true;
+    return false;
+}
+
+int main(){
+    save("STL.cpp");
+    String s{ "20240513 - Stl container iterator algorithm" };
+    // 사용자가 찾는 글자가 s에 있는지 알려주자
+    auto p = my_find_if(s.begin(), s.end(), 홀수판단);
+    while (p!=s.end()) {
+        cout << *p << endl;
+        ++p;
+        my_copy(p, s.end(), ostream_iterator<char>{cout});
+    }
+    
+}
+
+====================
+STL.cpp, 저장시간 : 2024-05-14 화요일 오후 4:43:11 
+====================
+//---------------------------------------------------------
+// 2024 1학기 STL 5월 13일 화요일
+// 
+// 알고리즘 함수는 반복자를 인자로 받는다.
+//---------------------------------------------------------
+#include <iostream>
+#include "save.h"
+#include "string.h"
+#include <algorithm>
+#include <vector>
+using namespace std;
+extern bool 관찰;
+
+
+template <class 반복자, class 값>
+반복자 my_find(반복자 b, 반복자 e, 값 v) {
+    for (; b < e; ++b) {
+        if(*b == v)break;
+    }
+    return b;
+}
+
+template <class 반복자, class 조건자>
+반복자 my_find_if(반복자 b, 반복자 e, 조건자 f) {
+    for (; b < e; ++b) {
+        if (f(*b))break;
+    }
+    return b;
+}
+
+template <class 반복자, class 출력>
+void my_copy(반복자 b, 반복자 e, 출력 f) {
+    for (; b < e; ++b) {
+        f= *b;
+    }
+
+}
+
+
+bool 홀수판단(char c) {
+    if (isdigit(c))
+        if (c & 1)
+            return true;
+    return false;
+}
+
+int main(){
+    save("STL.cpp");
+    String s{ "20240513 - Stl container iterator algorithm" };
+    // 사용자가 찾는 글자가 s에 있는지 알려주자
+    auto p = my_find_if(s.begin(), s.end(), 홀수판단);
+    while (p!=s.end()) {
+        cout << *p << endl;
+        ++p;
+        my_copy(p, s.end(), ostream_iterator<char>{cout});
+    }
+    
+}
+
+====================
+STL.cpp, 저장시간 : 2024-05-14 화요일 오후 4:43:37 
+====================
+//---------------------------------------------------------
+// 2024 1학기 STL 5월 13일 화요일
+// 
+// 알고리즘 함수는 반복자를 인자로 받는다.
+//---------------------------------------------------------
+#include <iostream>
+#include "save.h"
+#include "string.h"
+#include <algorithm>
+#include <vector>
+using namespace std;
+extern bool 관찰;
+
+
+template <class 반복자, class 값>
+반복자 my_find(반복자 b, 반복자 e, 값 v) {
+    for (; b < e; ++b) {
+        if(*b == v)break;
+    }
+    return b;
+}
+
+template <class 반복자, class 조건자>
+반복자 my_find_if(반복자 b, 반복자 e, 조건자 f) {
+    for (; b < e; ++b) {
+        if (f(*b))break;
+    }
+    return b;
+}
+
+template <class 반복자, class 출력>
+void my_copy(반복자 b, 반복자 e, 출력 f) {
+    for (; b < e; ++b) {
+        f= *b;
+    }
+
+}
+
+
+bool 홀수판단(char c) {
+    if (isdigit(c))
+        if (c & 1)
+            return true;
+    return false;
+}
+
+int main(){
+    save("STL.cpp");
+    String s{ "20240513 - Stl container iterator algorithm" };
+    // 사용자가 찾는 글자가 s에 있는지 알려주자
+    my_copy(s.begin(), s.end(), ostream_iterator<char>{cout});
+    
+}
+
+====================
+STL.cpp, 저장시간 : 2024-05-14 화요일 오후 4:44:26 
+====================
+//---------------------------------------------------------
+// 2024 1학기 STL 5월 13일 화요일
+// 
+// 알고리즘 함수는 반복자를 인자로 받는다.
+//---------------------------------------------------------
+#include <iostream>
+#include "save.h"
+#include "string.h"
+#include <algorithm>
+#include <vector>
+using namespace std;
+extern bool 관찰;
+
+
+template <class 반복자, class 값>
+반복자 my_find(반복자 b, 반복자 e, 값 v) {
+    for (; b < e; ++b) {
+        if(*b == v)break;
+    }
+    return b;
+}
+
+template <class 반복자, class 조건자>
+반복자 my_find_if(반복자 b, 반복자 e, 조건자 f) {
+    for (; b < e; ++b) {
+        if (f(*b))break;
+    }
+    return b;
+}
+
+template <class 반복자, class 출력반복자>
+void my_copy(반복자 b, 반복자 e, 출력반복자 f) {
+    for (; b < e; ++b) {
+        f= *b;
+    }
+}
+
+
+bool 홀수판단(char c) {
+    if (isdigit(c))
+        if (c & 1)
+            return true;
+    return false;
+}
+
+int main(){
+    save("STL.cpp");
+    String s{ "20240513 - Stl container iterator algorithm" };
+    // 사용자가 찾는 글자가 s에 있는지 알려주자
+    my_copy(s.begin(), s.end(), ostream_iterator<char>{cout});
+    
+}
+
+====================
+STL.cpp, 저장시간 : 2024-05-14 화요일 오후 4:47:08 
+====================
+//---------------------------------------------------------
+// 2024 1학기 STL 5월 13일 화요일
+// 
+// 알고리즘 함수는 반복자를 인자로 받는다.
+//---------------------------------------------------------
+#include <iostream>
+#include "save.h"
+#include "string.h"
+#include <algorithm>
+#include <vector>
+using namespace std;
+extern bool 관찰;
+
+
+template <class 반복자, class 값>
+반복자 my_find(반복자 b, 반복자 e, 값 v) {
+    for (; b < e; ++b) {
+        if(*b == v)break;
+    }
+    return b;
+}
+
+template <class 반복자, class 조건자>
+반복자 my_find_if(반복자 b, 반복자 e, 조건자 f) {
+    for (; b < e; ++b) {
+        if (f(*b))break;
+    }
+    return b;
+}
+
+template <class 반복자, class 출력반복자>
+void my_copy(반복자 b, 반복자 e, 출력반복자 f) {
+    for (; b < e; ++b) {
+        *f= *b;
+        ++b;
+        ++f;
+    }
+}
+
+
+bool 홀수판단(char c) {
+    if (isdigit(c))
+        if (c & 1)
+            return true;
+    return false;
+}
+
+int main(){
+    save("STL.cpp");
+    String s{ "20240513 - Stl container iterator algorithm" };
+    // 사용자가 찾는 글자가 s에 있는지 알려주자
+    my_copy(s.begin(), s.end(), ostream_iterator<char>{cout});
+    
+}
+
+====================
+STL.cpp, 저장시간 : 2024-05-14 화요일 오후 4:47:27 
+====================
+//---------------------------------------------------------
+// 2024 1학기 STL 5월 13일 화요일
+// 
+// 알고리즘 함수는 반복자를 인자로 받는다.
+//---------------------------------------------------------
+#include <iostream>
+#include "save.h"
+#include "string.h"
+#include <algorithm>
+#include <vector>
+using namespace std;
+extern bool 관찰;
+
+
+template <class 반복자, class 값>
+반복자 my_find(반복자 b, 반복자 e, 값 v) {
+    for (; b < e; ++b) {
+        if(*b == v)break;
+    }
+    return b;
+}
+
+template <class 반복자, class 조건자>
+반복자 my_find_if(반복자 b, 반복자 e, 조건자 f) {
+    for (; b < e; ++b) {
+        if (f(*b))break;
+    }
+    return b;
+}
+
+template <class 반복자, class 출력반복자>
+void my_copy(반복자 b, 반복자 e, 출력반복자 f) {
+    for (; b < e; ++b) {
+        *f= *b;
+        ++f;
+    }
+}
+
+
+bool 홀수판단(char c) {
+    if (isdigit(c))
+        if (c & 1)
+            return true;
+    return false;
+}
+
+int main(){
+    save("STL.cpp");
+    String s{ "20240513 - Stl container iterator algorithm" };
+    // 사용자가 찾는 글자가 s에 있는지 알려주자
+    my_copy(s.begin(), s.end(), ostream_iterator<char>{cout});
+    
+}
+
+====================
+STL.cpp, 저장시간 : 2024-05-14 화요일 오후 4:56:27 
+====================
+//---------------------------------------------------------
+// 2024 1학기 STL 5월 13일 화요일
+// 
+// 알고리즘 함수는 반복자를 인자로 받는다.
+//---------------------------------------------------------
+#include <iostream>
+#include "save.h"
+#include "string.h"
+#include <algorithm>
+#include <vector>
+using namespace std;
+extern bool 관찰;
+
+
+template <class 반복자, class 값>
+반복자 my_find(반복자 b, 반복자 e, 값 v) {
+    for (; b < e; ++b) {
+        if(*b == v)break;
+    }
+    return b;
+}
+
+template <class 반복자, class 조건자>
+반복자 my_find_if(반복자 b, 반복자 e, 조건자 f) {
+    for (; b < e; ++b) {
+        if (f(*b))break;
+    }
+    return b;
+}
+
+template <class 반복자, class 출력반복자>
+void my_copy(반복자 b, 반복자 e, 출력반복자 o) {
+    for (; b < e; ++b) {
+        *o= *b;
+        ++o;
+    }
+}
+
+
+bool 홀수판단(char c) {
+    if (isdigit(c))
+        if (c & 1)
+            return true;
+    return false;
+}
+
+int main(){
+    save("STL.cpp");
+    String s{ "20240513 - Stl container iterator algorithm" };
+    // 사용자가 찾는 글자가 s에 있는지 알려주자
+    vector<char> v;
+    v.reserve(200);
+    my_copy(s.begin(), s.end(), v.begin());
+    for (char c : v) {
+        cout << c;
+    }
+    cout<<endl;
+}
+
+====================
+STL.cpp, 저장시간 : 2024-05-14 화요일 오후 5:05:19 
+====================
+//---------------------------------------------------------
+// 2024 1학기 STL 5월 13일 화요일
+// 
+// 알고리즘 함수는 반복자를 인자로 받는다.
+//---------------------------------------------------------
+#include <iostream>
+#include "save.h"
+#include "string.h"
+#include <algorithm>
+#include <vector>
+using namespace std;
+extern bool 관찰;
+
+
+template <class 반복자, class 값>
+반복자 my_find(반복자 b, 반복자 e, 값 v) {
+    for (; b < e; ++b) {
+        if(*b == v)break;
+    }
+    return b;
+}
+
+template <class 반복자, class 조건자>
+반복자 my_find_if(반복자 b, 반복자 e, 조건자 f) {
+    for (; b < e; ++b) {
+        if (f(*b))break;
+    }
+    return b;
+}
+
+template <class 반복자, class 출력반복자>
+void my_copy(반복자 b, 반복자 e, 출력반복자 o) {
+    for (; b < e; ++b) {
+        *o= *b;
+        ++o;
+    }
+}
+
+
+bool 홀수판단(char c) {
+    if (isdigit(c))
+        if (c & 1)
+            return true;
+    return false;
+}
+
+int main(){
+    save("STL.cpp");
+    String s{ "20240513 - Stl container iterator algorithm" };
+    // 사용자가 찾는 글자가 s에 있는지 알려주자
+    vector<char> v;
+    v.reserve(200);
+    my_copy(s.begin(), s.end(), back_inserter(v));
+    for (char c : v) {
+        cout << c;
+    }
+    cout<<endl;
+}
+
+====================
+STL.cpp, 저장시간 : 2024-05-20 월요일 오후 5:35:10 
+====================
+//---------------------------------------------------------
+// 2024 1학기 STL 5월 13일 화요일
+// 
+// 알고리즘 함수는 반복자를 인자로 받는다.
+//---------------------------------------------------------
+#include <iostream>
+#include "save.h"
+#include "string.h"
+#include <algorithm>
+#include <set>
+using namespace std;
+extern bool 관찰;
+
+
+
+int main(){
+    save("STL.cpp");
+
+    set<int> s{ 1,3,5,7,9 };
+    for (int i : s) {
+        cout << i << endl;
+    }
+}
+
+====================
+STL.cpp, 저장시간 : 2024-05-20 월요일 오후 5:35:25 
+====================
+//---------------------------------------------------------
+// 2024 1학기 STL 5월 13일 화요일
+// 
+// 알고리즘 함수는 반복자를 인자로 받는다.
+//---------------------------------------------------------
+#include <iostream>
+#include "save.h"
+#include "string.h"
+#include <algorithm>
+#include <set>
+using namespace std;
+extern bool 관찰;
+
+
+
+int main(){
+    save("STL.cpp");
+
+    set<int> s{ 1,5,3,7,9 };
+    for (auto i : s) {
+        cout << i << endl;
+    }
+}
+
+====================
+STL.cpp, 저장시간 : 2024-05-20 월요일 오후 5:35:44 
+====================
+//---------------------------------------------------------
+// 2024 1학기 STL 5월 13일 화요일
+// 
+// 알고리즘 함수는 반복자를 인자로 받는다.
+//---------------------------------------------------------
+#include <iostream>
+#include "save.h"
+#include "string.h"
+#include <algorithm>
+#include <set>
+using namespace std;
+extern bool 관찰;
+
+
+
+int main(){
+    save("STL.cpp");
+
+    set<int> s{ 1,3,5,7,9,2,4,6,8,10,5 };
+    for (auto i : s) {
+        cout << i << endl;
+    }
+}
+
+====================
+STL.cpp, 저장시간 : 2024-05-20 월요일 오후 5:36:02 
+====================
+//---------------------------------------------------------
+// 2024 1학기 STL 5월 13일 화요일
+// 
+// 알고리즘 함수는 반복자를 인자로 받는다.
+//---------------------------------------------------------
+#include <iostream>
+#include "save.h"
+#include "string.h"
+#include <algorithm>
+#include <set>
+using namespace std;
+extern bool 관찰;
+
+
+
+int main(){
+    save("STL.cpp");
+
+    set<int> s{ 1,3,5,7,9,2,4,6,8,10 };
+    for (auto i : s) {
+        cout << i << endl;
+    }
+}
+
+====================
+STL.cpp, 저장시간 : 2024-05-20 월요일 오후 6:01:30 
+====================
+//---------------------------------------------------------
+// 2024 1학기 STL 5월 13일 화요일
+// 
+// 알고리즘 함수는 반복자를 인자로 받는다.
+//---------------------------------------------------------
+#include <iostream>
+#include "save.h"
+#include "string.h"
+#include <fstream>
+#include <algorithm>
+#include <set>
+using namespace std;
+extern bool 관찰;
+
+
+
+int main(){
+    save("STL.cpp");
+    
+    set<String> s;
+    ifstream in{ "이상한 나라의 앨리스.txt" };
+    if (!in) return 0;
+
+    s = { istream_iterator<String>{in},{} };
+    in.close(); 
+
+    
+    cout << s.size() << endl;
+    
+}
+
+====================
+STL.cpp, 저장시간 : 2024-05-20 월요일 오후 6:02:26 
+====================
+//---------------------------------------------------------
+// 2024 1학기 STL 5월 13일 화요일
+// 
+// 알고리즘 함수는 반복자를 인자로 받는다.
+//---------------------------------------------------------
+#include <iostream>
+#include "save.h"
+#include "string.h"
+#include <fstream>
+#include <algorithm>
+#include <set>
+using namespace std;
+extern bool 관찰;
+
+
+
+int main(){
+    save("STL.cpp");
+    
+    set<String> s;
+    ifstream in{ "이상한 나라의 앨리스.txt" };
+    if (!in) return 0;
+
+    s = { istream_iterator<String>{in},{} };
+    String word;
+    while (in >> word) { 
+        s.insert(word); 
+    }
+
+
+    
+    cout << s.size() << endl;
+    
+}
+
+====================
+STL.cpp, 저장시간 : 2024-05-20 월요일 오후 6:02:41 
+====================
+//---------------------------------------------------------
+// 2024 1학기 STL 5월 13일 화요일
+// 
+// 알고리즘 함수는 반복자를 인자로 받는다.
+//---------------------------------------------------------
+#include <iostream>
+#include "save.h"
+#include "string.h"
+#include <fstream>
+#include <algorithm>
+#include <set>
+using namespace std;
+extern bool 관찰;
+
+
+
+int main(){
+    save("STL.cpp");
+    
+    set<String> s;
+    ifstream in{ "이상한 나라의 앨리스.txt" };
+    if (!in) return 0;
+
+
+    String word;
+    while (in >> word) { 
+        s.insert(word); 
+    }
+    
+    cout << s.size() << endl;
+    
+}
+
+====================
+STL.cpp, 저장시간 : 2024-05-20 월요일 오후 6:03:29 
+====================
+//---------------------------------------------------------
+// 2024 1학기 STL 5월 13일 화요일
+// 
+// 알고리즘 함수는 반복자를 인자로 받는다.
+//---------------------------------------------------------
+#include <iostream>
+#include "save.h"
+#include "string.h"
+#include <fstream>
+#include <algorithm>
+#include <set>
+using namespace std;
+extern bool 관찰;
+
+
+
+int main(){
+    save("STL.cpp");
+    
+    set<String> s;
+    ifstream in{ "이상한 나라의 앨리스.txt" };
+    if (!in) return 0;
+
+    //s = { istream_iterator<String>{in},{} };
+    String word;
+    while (in >> word) { 
+        s.insert(word); 
+    }
+    
+    for (const String& word : s) {
+        cout << word << endl;
+    }
+    
+}
+
+====================
+STL.cpp, 저장시간 : 2024-05-20 월요일 오후 6:10:23 
+====================
+//---------------------------------------------------------
+// 2024 1학기 STL 5월 13일 화요일
+// 
+// 알고리즘 함수는 반복자를 인자로 받는다.
+//---------------------------------------------------------
+#include <iostream>
+#include "save.h"
+#include "string.h"
+#include <fstream>
+#include <algorithm>
+#include <set>
+using namespace std;
+extern bool 관찰;
+
+
+
+int main(){
+    save("STL.cpp");
+    
+    set<String> s;
+    ifstream in{ "이상한 나라의 앨리스.txt" };
+    if (!in) return 0;
+
+    //s = { istream_iterator<String>{in},{} };
+    String word;
+    while (in >> word) { 
+        s.insert(word); 
+    }
+    less a;
+    cout<<a(3, 4);
+    /*for (const String& word : s) {
+        cout << word << endl;
+    }*/
+    
+}
+
+====================
+STL.cpp, 저장시간 : 2024-05-20 월요일 오후 6:25:27 
+====================
+//---------------------------------------------------------
+// 2024 1학기 STL 5월 13일 화요일
+// 
+// 알고리즘 함수는 반복자를 인자로 받는다.
+//---------------------------------------------------------
+#include <iostream>
+#include "save.h"
+#include "string.h"
+#include <fstream>
+#include <algorithm>
+#include <set>
+using namespace std;
+extern bool 관찰;
+
+bool 길이(const String& l, const String& r) {
+    return l.getLen() < r.getLen();
+}
+
+int main(){
+    save("STL.cpp");
+    
+    set <String, decltype(길이)*> s(길이);
+    ifstream in{ "이상한 나라의 앨리스.txt" };
+    if (!in) return 0;
+
+    //s = { istream_iterator<String>{in},{} };
+    String word;
+    while (in >> word) { 
+        s.insert(word); 
+    }
+    
+    for (const String& word : s) {
+        cout << word << endl;
+    }
+    
+}
+
+====================
+STL.cpp, 저장시간 : 2024-05-20 월요일 오후 6:25:58 
+====================
+//---------------------------------------------------------
+// 2024 1학기 STL 5월 13일 화요일
+// 
+// 알고리즘 함수는 반복자를 인자로 받는다.
+//---------------------------------------------------------
+#include <iostream>
+#include "save.h"
+#include "string.h"
+#include <fstream>
+#include <algorithm>
+#include <set>
+using namespace std;
+extern bool 관찰;
+
+bool 길이(const String& l, const String& r) {
+    return l.getLen() < r.getLen();
+}
+
+int main(){
+    save("STL.cpp");
+    
+    set <String, decltype(길이)*> s{ 길이 };
+    ifstream in{ "이상한 나라의 앨리스.txt" };
+    if (!in) return 0;
+
+    //s = { istream_iterator<String>{in},{} };
+    String word;
+    while (in >> word) { 
+        s.insert(word); 
+    }
+    
+    for (const String& word : s) {
+        cout << word << endl;
+    }
+    
+}
+
+====================
+STL.cpp, 저장시간 : 2024-05-20 월요일 오후 6:28:05 
+====================
+//---------------------------------------------------------
+// 2024 1학기 STL 5월 13일 화요일
+// 
+// 알고리즘 함수는 반복자를 인자로 받는다.
+//---------------------------------------------------------
+#include <iostream>
+#include "save.h"
+#include "string.h"
+#include <fstream>
+#include <algorithm>
+#include <set>
+using namespace std;
+extern bool 관찰;
+
+
+int main(){
+    save("STL.cpp");
+    
+    set <String, bool(*)(const String& l, const String& r)> s{[](const String& l, const String& r) {
+        return l.getLen() < r.getLen();
+        } };
+    ifstream in{ "이상한 나라의 앨리스.txt" };
+    if (!in) return 0;
+
+    //s = { istream_iterator<String>{in},{} };
+    String word;
+    while (in >> word) { 
+        s.insert(word); 
+    }
+    
+    for (const String& word : s) {
+        cout << word << endl;
+    }
+    
+}
+
+====================
+STL.cpp, 저장시간 : 2024-05-20 월요일 오후 6:32:21 
+====================
+//---------------------------------------------------------
+// 2024 1학기 STL 5월 13일 화요일
+// 
+// 알고리즘 함수는 반복자를 인자로 받는다.
+//---------------------------------------------------------
+#include <iostream>
+#include "save.h"
+#include "string.h"
+#include <fstream>
+#include <algorithm>
+#include <set>
+using namespace std;
+extern bool 관찰;
+
+
+int main(){
+    save("STL.cpp");
+    
+    multiset <String, bool(*)(const String& l, const String& r)> s {
+        [](const String& l, const String& r) {
+        return l.getLen() < r.getLen();
+        } 
+    };
+    ifstream in{ "이상한 나라의 앨리스.txt" };
+    if (!in) return 0;
+
+    //s = { istream_iterator<String>{in},{} };
+    String word;
+    while (in >> word) { 
+        s.insert(word); 
+    }
+    
+    for (const String& word : s) {
+        cout << word << endl;
+    }
+    
+}
+
+====================
+STL.cpp, 저장시간 : 2024-05-20 월요일 오후 6:45:27 
+====================
+//---------------------------------------------------------
+// 2024 1학기 STL 5월 13일 화요일
+// 
+// 알고리즘 함수는 반복자를 인자로 받는다.
+//---------------------------------------------------------
+#include <iostream>
+#include "save.h"
+#include "string.h"
+#include <fstream>
+#include <algorithm>
+#include <set>
+using namespace std;
+extern bool 관찰;
+
+
+int main(){
+    save("STL.cpp");
+    
+    multiset <String, bool(*)(const String& l, const String& r)> s {
+        [](const String& l, const String& r) {
+            if (islower(*l.begin()) && isupper(*r.begin()) ){
+                return true;
+            }
+            return false;
+        } 
+    };
+    ifstream in{ "이상한 나라의 앨리스.txt" };
+    if (!in) return 0;
+
+    //s = { istream_iterator<String>{in},{} };
+    String word;
+    while (in >> word) { 
+        s.insert(word); 
+    }
+    
+    for (const String& word : s) {
+        cout << word << endl;
+    }
+    
+}
+
+====================
+STL.cpp, 저장시간 : 2024-05-20 월요일 오후 6:45:44 
+====================
+//---------------------------------------------------------
+// 2024 1학기 STL 5월 13일 화요일
+// 
+// 알고리즘 함수는 반복자를 인자로 받는다.
+//---------------------------------------------------------
+#include <iostream>
+#include "save.h"
+#include "string.h"
+#include <fstream>
+#include <algorithm>
+#include <set>
+using namespace std;
+extern bool 관찰;
+
+
+int main(){
+    save("STL.cpp");
+    
+    multiset <String, bool(*)(const String& l, const String& r)> s {
+        [](const String& l, const String& r) {
+            if (islower(*l.begin()) && isupper(*r.begin()) ){
+                return false;
+            }
+            return true;
+        } 
+    };
+    ifstream in{ "이상한 나라의 앨리스.txt" };
+    if (!in) return 0;
+
+    //s = { istream_iterator<String>{in},{} };
+    String word;
+    while (in >> word) { 
+        s.insert(word); 
+    }
+    
+    for (const String& word : s) {
+        cout << word << endl;
+    }
+    
+}
+
+====================
+STL.cpp, 저장시간 : 2024-05-20 월요일 오후 6:47:15 
+====================
+//---------------------------------------------------------
+// 2024 1학기 STL 5월 13일 화요일
+// 
+// 알고리즘 함수는 반복자를 인자로 받는다.
+//---------------------------------------------------------
+#include <iostream>
+#include "save.h"
+#include "string.h"
+#include <fstream>
+#include <algorithm>
+#include <set>
+using namespace std;
+extern bool 관찰;
+
+
+int main(){
+    save("STL.cpp");
+    
+    multiset <String> s;
+    ifstream in{ "이상한 나라의 앨리스.txt" };
+    if (!in) return 0;
+
+    //s = { istream_iterator<String>{in},{} };
+    String word;
+    while (in >> word) { 
+        s.insert(word); 
+    }
+    
+    for (const String& word : s) {
+        cout << word << " ";
+    }
+    cout << endl;
+    
+}
+
+====================
+STL.cpp, 저장시간 : 2024-05-20 월요일 오후 6:47:48 
+====================
+//---------------------------------------------------------
+// 2024 1학기 STL 5월 13일 화요일
+// 
+// 알고리즘 함수는 반복자를 인자로 받는다.
+//---------------------------------------------------------
+#include <iostream>
+#include "save.h"
+#include "string.h"
+#include <fstream>
+#include <algorithm>
+#include <set>
+using namespace std;
+extern bool 관찰;
+
+
+int main(){
+    save("STL.cpp");
+    
+    multiset <String> s;
+    ifstream in{ "이상한 나라의 앨리스.txt" };
+    if (!in) return 0;
+
+    //s = { istream_iterator<String>{in},{} };
+    String word;
+    while (in >> word) { 
+        s.insert(word); 
+    }
+
+    cout <<s.size()<< endl;
+    
+}
+
+====================
+STL.cpp, 저장시간 : 2024-05-20 월요일 오후 6:52:13 
+====================
+//---------------------------------------------------------
+// 2024 1학기 STL 5월 13일 화요일
+// 
+// 알고리즘 함수는 반복자를 인자로 받는다.
+//---------------------------------------------------------
+#include <iostream>
+#include "save.h"
+#include "string.h"
+#include <fstream>
+#include <algorithm>
+#include <set>
+using namespace std;
+extern bool 관찰;
+
+
+int main(){
+    save("STL.cpp");
+    
+    multiset <String> s;
+    ifstream in{ "이상한 나라의 앨리스.txt" };
+    if (!in) return 0;
+
+    //s = { istream_iterator<String>{in},{} };
+    String word;
+    while (in >> word) { 
+        s.insert(word); 
+    }
+
+    cout <<s.size()<< endl;
+    while (true) {
+        String word;
+        cin >> word;
+        
+        if (s.end() == s.find(word)) {
+            cout << word << "는 앨리스에 있음" << endl;
+        }
+        else {
+            cout << "그딴건 없음" << endl;
+        }
+    }
+}
+
+====================
+STL.cpp, 저장시간 : 2024-05-20 월요일 오후 6:52:39 
+====================
+//---------------------------------------------------------
+// 2024 1학기 STL 5월 13일 화요일
+// 
+// 알고리즘 함수는 반복자를 인자로 받는다.
+//---------------------------------------------------------
+#include <iostream>
+#include "save.h"
+#include "string.h"
+#include <fstream>
+#include <algorithm>
+#include <set>
+using namespace std;
+extern bool 관찰;
+
+
+int main(){
+    save("STL.cpp");
+    
+    multiset <String> s;
+    ifstream in{ "이상한 나라의 앨리스.txt" };
+    if (!in) return 0;
+
+    //s = { istream_iterator<String>{in},{} };
+    String word;
+    while (in >> word) { 
+        s.insert(word); 
+    }
+
+    cout <<s.size()<< endl;
+    while (true) {
+        String word;
+        cin >> word;
+        
+        if (s.end() != s.find(word)) {
+            cout << word << "는 앨리스에 있음" << endl;
+        }
+        else {
+            cout << "그딴건 없음" << endl;
+        }
+    }
+}
+
+====================
+STL.cpp, 저장시간 : 2024-05-20 월요일 오후 7:04:14 
+====================
+//---------------------------------------------------------
+// 2024 1학기 STL 5월 13일 화요일
+// 
+// 알고리즘 함수는 반복자를 인자로 받는다.
+//---------------------------------------------------------
+#include <iostream>
+#include "save.h"
+#include "string.h"
+#include <fstream>
+#include <algorithm>
+#include <set>
+using namespace std;
+extern bool 관찰;
+
+
+int main(){
+    save("STL.cpp");
+    
+    multiset <String> s;
+    ifstream in{ "이상한 나라의 앨리스.txt" };
+    if (!in) return 0;
+
+    //s = { istream_iterator<String>{in},{} };
+    String word;
+    while (in >> word) { 
+        s.insert(word); 
+    }
+
+    cout <<s.size()<< endl;
+    while (true) {
+        String word;
+        cin >> word;
+        if (s.contains(word)) {
+            cout << word << "는 앨리스에 있음" << endl;
+        }
+        else {
+            cout << "그딴건 없음" << endl;
+        }
+    }
+}
+
+====================
+STL.cpp, 저장시간 : 2024-05-20 월요일 오후 7:04:34 
+====================
+//---------------------------------------------------------
+// 2024 1학기 STL 5월 13일 화요일
+// 
+// 알고리즘 함수는 반복자를 인자로 받는다.
+//---------------------------------------------------------
+#include <iostream>
+#include "save.h"
+#include "string.h"
+#include <fstream>
+#include <algorithm>
+#include <set>
+using namespace std;
+extern bool 관찰;
+
+
+int main(){
+    save("STL.cpp");
+    
+    multiset <String> s;
+    ifstream in{ "이상한 나라의 앨리스.txt" };
+    if (!in) return 0;
+
+    //s = { istream_iterator<String>{in},{} };
+    String word;
+    while (in >> word) { 
+        s.insert(word); 
+    }
+
+    cout <<s.size()<< endl;
+    while (true) {
+        String word;
+        cin >> word;
+        if (s.contains(word)) {
+            cout << word << "는 앨리스에 있음" << endl;
+        }
+        else {
+            cout << "그딴건 없음" << endl;
+        }
+    }
+}
+
+====================
+STL.cpp, 저장시간 : 2024-05-21 화요일 오후 4:02:51 
+====================
+//---------------------------------------------------------
+// 2024 1학기 STL 5월 13일 화요일
+// 
+// 알고리즘 함수는 반복자를 인자로 받는다.
+//---------------------------------------------------------
+#include <iostream>
+#include "save.h"
+#include "string.h"
+#include <fstream>
+#include <algorithm>
+#include <set>
+using namespace std;
+extern bool 관찰;
+
+
+int main(){
+    save("STL.cpp");
+    
+    multiset <String> s;
+    ifstream in{ "이상한 나라의 앨리스.txt" };
+    if (!in) return 0;
+
+    //s = { istream_iterator<String>{in},{} };
+    String word;
+    while (in >> word) { 
+        s.insert(word); 
+    }
+
+    cout <<s.size()<< endl;
+    while (true) {
+        String word;
+        cin >> word;
+        
+        for (const String& s : s) {
+            if (search(s.begin(), s.end(),
+                word.begin(), word.end()) != s.end()) {
+                cout << s << std::endl;
+            }
+        }
+    }
+}
+
+====================
+STL.cpp, 저장시간 : 2024-05-21 화요일 오후 4:22:03 
+====================
+//---------------------------------------------------------
+// 2024 1학기 STL 5월 13일 화요일
+// 
+// 알고리즘 함수는 반복자를 인자로 받는다.
+//---------------------------------------------------------
+#include <iostream>
+#include "save.h"
+#include "string.h"
+#include <fstream>
+#include <algorithm>
+#include <set>
+using namespace std;
+extern bool 관찰;
+
+
+int main(){
+    save("STL.cpp");
+    
+    multiset <String> s;
+    ifstream in{ "이상한 나라의 앨리스.txt" };
+    if (!in) return 0;
+
+    //s = { istream_iterator<String>{in},{} };
+    String word;
+    while (in >> word) { 
+        s.insert(word); 
+    }
+
+    cout <<s.size()<< endl;
+    while (true) {
+        String word;
+        cin >> word;
+        vector<String> results;
+        for (const String& s : s) {
+            if (search(s.begin(), s.end(),
+                word.begin(), word.end()) != s.end()) {
+                results.push_back(s);
+            }
+        }
+        for (const String& s : results) {
+            cout << s << " ";
+        }
+        
+    }
+}
+
+====================
+STL.cpp, 저장시간 : 2024-05-21 화요일 오후 4:22:43 
+====================
+//---------------------------------------------------------
+// 2024 1학기 STL 5월 13일 화요일
+// 
+// 알고리즘 함수는 반복자를 인자로 받는다.
+//---------------------------------------------------------
+#include <iostream>
+#include "save.h"
+#include "string.h"
+#include <fstream>
+#include <algorithm>
+#include <set>
+using namespace std;
+extern bool 관찰;
+
+
+int main(){
+    save("STL.cpp");
+    
+    multiset <String> s;
+    ifstream in{ "이상한 나라의 앨리스.txt" };
+    if (!in) return 0;
+
+    //s = { istream_iterator<String>{in},{} };
+    String word;
+    while (in >> word) { 
+        s.insert(word); 
+    }
+
+    cout <<s.size()<< endl;
+    while (true) {
+        String word;
+        cin >> word;
+        vector<String> results;
+        for (const String& s : s) {
+            if (search(s.begin(), s.end(),
+                word.begin(), word.end()) != s.end()) {
+                if (std::find(results.begin(), results.end(), s) == results.end()) {
+                    results.push_back(s);
+                }
+            }
+        }
+        for (const String& s : results) {
+            cout << s << " ";
+        }
+        
+    }
+}
+
+====================
+STL.cpp, 저장시간 : 2024-05-21 화요일 오후 4:25:36 
+====================
+//---------------------------------------------------------
+// 2024 1학기 STL 5월 13일 화요일
+// 
+// 알고리즘 함수는 반복자를 인자로 받는다.
+//---------------------------------------------------------
+#include <iostream>
+#include "save.h"
+#include "string.h"
+#include <fstream>
+#include <algorithm>
+#include <set>
+using namespace std;
+extern bool 관찰;
+
+
+int main(){
+    save("STL.cpp");
+    
+    multiset <String> s;
+    ifstream in{ "이상한 나라의 앨리스.txt" };
+    if (!in) return 0;
+
+    //s = { istream_iterator<String>{in},{} };
+    String word;
+    while (in >> word) { 
+        s.insert(word); 
+    }
+
+    cout <<s.size()<< endl;
+    while (true) {
+        String word;
+        cin >> word;
+        vector<String> results;
+        for (const String& s : s) {
+            if (search(s.begin(), s.end(),
+                word.begin(), word.end()) != s.end()) {
+                if (std::find(results.begin(), results.end(), s) == results.end()) {
+                    results.push_back(s);
+                }
+            }
+        }
+        for (const String& s : results) {
+            cout << s << " ";
+        }
+        
+    }
+}
+
+====================
+STL.cpp, 저장시간 : 2024-05-21 화요일 오후 4:58:10 
+====================
+//---------------------------------------------------------
+// 2024 1학기 STL 5월 13일 화요일
+// 
+// 알고리즘 함수는 반복자를 인자로 받는다.
+//---------------------------------------------------------
+#include <iostream>
+#include "save.h"
+#include "string.h"
+#include <fstream>
+#include <algorithm>
+#include <set>
+using namespace std;
+extern bool 관찰;
+
+
+int main(){
+    save("STL.cpp");
+    
+    multiset <String> s;
+    ifstream in{ "이상한 나라의 앨리스.txt" };
+    if (!in) return 0;
+
+    //s = { istream_iterator<String>{in},{} };
+    String word;
+    while (in >> word) { 
+        s.insert(word); 
+    }
+
+    cout <<s.size()<< endl;
+    while (true) {
+        String word;
+        cin >> word;
+        
+        auto [하한, 상한]= s.equal_range(word);
+        if (하한 == 상한)
+            cout << word << " - 없는 단어" << endl;
+        else
+            cout << distance(하한, 상한) << "개의 " << word << " 발견" << endl;
+    }
+}
+
+====================
+STL.cpp, 저장시간 : 2024-05-21 화요일 오후 4:58:40 
+====================
+//---------------------------------------------------------
+// 2024 1학기 STL 5월 13일 화요일
+// 
+// 알고리즘 함수는 반복자를 인자로 받는다.
+//---------------------------------------------------------
+#include <iostream>
+#include "save.h"
+#include "string.h"
+#include <fstream>
+#include <algorithm>
+#include <set>
+using namespace std;
+extern bool 관찰;
+
+
+int main(){
+    save("STL.cpp");
+    
+    multiset <String> s;
+    ifstream in{ "이상한 나라의 앨리스.txt" };
+    if (!in) return 0;
+
+    //s = { istream_iterator<String>{in},{} };
+    String word;
+    while (in >> word) { 
+        s.insert(word); 
+    }
+
+    cout <<s.size()<< endl;
+    while (true) {
+        String word;
+        cin >> word;
+        
+        auto [하한, 상한]= s.equal_range(word);
+        if (하한 == 상한)
+            cout << word << " - 없는 단어" << endl;
+        else
+            cout << distance(하한, 상한) << "개의 " << word << " 발견" << endl;
+    }
+}
+
+====================
+STL.cpp, 저장시간 : 2024-05-21 화요일 오후 5:21:50 
+====================
+//---------------------------------------------------------
+// 2024 1학기 STL 5월 13일 화요일
+// 
+// 알고리즘 함수는 반복자를 인자로 받는다.
+//---------------------------------------------------------
+#include <iostream>
+#include "save.h"
+#include "string.h"
+#include <fstream>
+#include <algorithm>
+#include <map>
+#include <list>
+using namespace std;
+extern bool 관찰;
+
+
+int main(){
+    save("STL.cpp");
+    map<String, list<String>> m{ { "아이브",{"안유진","장원영","이서","리즈","레이","가을"}} };
+    m.insert(pair<String, list<String>> { "아이브", { "안유진","장원영","이서","리즈","레이","가을" } });
+
+}
